@@ -80,6 +80,9 @@ $(document).ready(function () {
 				name: {
 					required: true,
 				},
+				websiteAddress: {
+					required: true,
+				},
 				textarea: {
 					required: false, // не валидируется
 				},
@@ -104,6 +107,9 @@ $(document).ready(function () {
 			messages: {
 				name: {
 					required: "Заполните поле"
+				},
+				websiteAddress: {
+					required: "Введите адрес сайта"
 				},
 				textarea: {
 					required: "Заполните поле"

@@ -842,9 +842,8 @@ label.check, label.radio
 // Секция 
 .intermediate
 	text-align: center
-	background-color: #00b6f4
-	padding-top: 50px
-	padding-bottom: 50px
+	background-color: #ececec
+	padding-bottom: 80px
 	.intermediate_title
 		max-width: 650px
 		margin: auto
@@ -856,30 +855,37 @@ label.check, label.radio
 			color: #052243
 	.intermediate_wrap
 		margin-top: 40px
-		form
 		.intermediate_item
-			margin-bottom: 20px
-			input
+			margin-bottom: 40px
+			&:last-of-type
+				margin: auto
+			input:not([type=submit])
 				width: 100%
-				display: inline-block
-				border: 1px solid #a2b6c9
-				background: #fff
-				color: #43637f
+				border: none
+				border-bottom: 1px solid #353535
+				background: transparent
+				@include font($main_txt_color, 18.2, $font_OpenSansLight, 1.2)
 				height: 40px
 				padding: 0 0 0 9px
+				transition: 0.5s
+				&:hover
+					outline: 0
+				&:active
+					outline: 0
+					border-bottom: 1px solid $main_color
+				&:focus
+					outline: 0
+					border-bottom: 1px solid $main_color
 				&::-webkit-input-placeholder
-					color: #43637f
+					color: #353535
 				&:-moz-placeholder
-					color: #43637f
+					color: #353535
 				&::-moz-placeholder
-					color: #43637f
+					color: #353535
 				&:-ms-input-placeholder
-					color: #43637f
+					color: #353535
 			input[type=submit]
-				background: #fff
-				color: #43637f
-	
-//	Секция 
+				@include fz(18)
 //	Секция
 //	Секция
 //	Секция 
