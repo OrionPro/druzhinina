@@ -666,16 +666,22 @@ nav[canvas]
 	.who-am-i__txt
 		@include font($main_txt_color, 18, $font_OpenSansLight, 1.2)
 .who-am-i__big-title-img
-	min-height: 250px
-	padding-top: 30px
 	padding-left: 50px
+	position: relative
+	img
+		position: absolute
+		bottom: -50px
+		left: -48px
+		z-index: 10
 	.who-am-i__big-title__wrap
 		width: 1043px
 		height: 189px
+		padding-left: 180px
 		box-shadow: 0 0 10px 3px rgba(246, 166, 141, 0.56)
 		transform: skew(-32deg)
-	&.marketing
-		padding-top: 70px
+		display: flex
+		align-items: center
+		justify-content: center
 	p
 		max-width: 745px
 		@include font($main_txt_color, 18, $font_OpenSansLight, 1.2)
