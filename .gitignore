@@ -46,7 +46,6 @@ crashlytics-build.properties
 fabric.properties
 
 # .gitignore
-source/img/*.psd
 build/
 .idea/
 .idea/modules.xml

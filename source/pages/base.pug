@@ -56,24 +56,29 @@ html(class="no-js" lang="ru")
 
 		div(canvas='container')
 			block header
+				.top-shares
+					.container
+						.top-shares__wrap
+							.top-shares__txt
+								a(href="#")
+									img(src=require("../../img/close-ultra-thin.png"))
+								p
+									| 29-31 ОКТЯБРЯ 2017
+									span «АНАТОМИЯ ПРОДАЖ В ИНТЕРНЕТЕ»
+								button(type="text") Принять участие
+
 				header(class="header")
 					.container
 						.row
 							.header__logo
-								a(href="/" class="logo" title="Логотип").
-									Ваш Логотип
+								a(href="/" class="logo" title="Логотип")
+									img(src=require("../../img/logo.png"))
 							nav.header__nav
 								ul
-									-var links = [{title:'Blog', href:'blog.html'},{title:'Преимущества', href:'#'},{title:'Отзывы', href:'#'},{title:'7 3842 59 61 68', href:'tel:73842596168'}];
+									-var links = [{title:'Авторские курсы', href:'#'},{title:'Услуги', href:'#'},{title:'Отзывы клиентов', href:'#'},{title:'Блог', href:'#'}, {title: 'Личный кабинет', href:'#'}];
 									each i in links
 										li
 											a(href=i.href)= i.title
-							.header__modal
-								a(data-effect="mfp-zoom-in" data-info="Обратный звонок" href="#popup" class="open-popup-link" title='Вызов стандартного модального окна') Обратный звонок
-							.header__modal.last
-								a(data-effect="mfp-zoom-in" data-info="Обратный звонок" href="#popup3" class="open-popup-link active" title='Вызов примера модального окна, в виде навигации.') Мобильное меню
-
-			// В блок main пишем весь контент (по умолчанию всё, что мы положим в block main в index.pug будет затираться - смотрим доки по pug, этот комментарий на продакшен стереть )
 			block main
 			block footer
 				// Секция footer
@@ -81,7 +86,7 @@ html(class="no-js" lang="ru")
 		div(off-canvas='id-1 left shift')
 			nav.header_nav_mobile
 				ul.menu
-					-var obj1 = [{title:'Преимущества', href:'#'},{title:'Отзывы', href:'#'},{title:'7 38 425 961 68', href:'tel:73842596168'},{title:'Преимущества', href:'#'},{title:'Отзывы', href:'#'},{title:'Примеры', href:'#'}];
+					-var obj1 = [{title:'Авторские курсы', href:'blog.html'},{title:'Услуги', href:'#'},{title:'Отзывы клиентов', href:'#'},{title:'Блог', href:'Личный кабинет'}];
 					each i in obj1
 						li
 							a(href=i.href)= i.title

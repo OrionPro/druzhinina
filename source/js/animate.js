@@ -31,7 +31,7 @@ class Animation {
 	}
 
 	play() {
-		if (this.activeSection('top-section',0, 500)) {
+		if (this.activeSection('header',500)) {
 			this.tl1.resume();
 		}
 	}

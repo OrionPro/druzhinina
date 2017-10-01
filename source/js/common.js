@@ -7,7 +7,6 @@ require("../libs/libs").magnific_popup();
 require("../libs/libs").tooltipster_follower();
 require("../libs/libs").tooltipster();
 require("../libs/libs").jqueryValidation();
-require("../libs/libs").select2();
 require("../libs/libs").input_mask();
 require("../libs/libs").sticky();
 import validation from '../js/validation';
@@ -75,14 +74,11 @@ $(document).ready(function () {
 	}
 
 	if (get_name_browser() == "Trident" || get_name_browser() == "Internet Explorer" || get_name_browser() == "Edge") {
-		$('.check i, .radio i').css("margin-top", "2px")
+		$('.check i, .radio i').css("margin-top", "2px");
+		$('.check i, .radio i').css("margin-top", "2px");
 	}
-	if (get_name_browser() == "Google Chrome") {
-		console.log("Google Chrome");
-
-	}
-	if (get_name_browser() == "Safari") {
-		console.log("Safari");
+	if (get_name_browser() == "Trident" || get_name_browser() == "Internet Explorer") {
+		$('.department-for-rent .row').css("height", "550px");
 	}
 	// для инициализации tooltips
 	// $( document ).tooltip({

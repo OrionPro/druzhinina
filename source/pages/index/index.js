@@ -10,22 +10,26 @@ import App from '../../js/react';
 
 $(document).ready(function () {
 	$("body").addClass("index ink-transition");
-	$(".sticky").sticky({
-		topSpacing: 0,
-		widthFromWrapper: false
+	// Убираем рекламный блок top-shares
+	$(".top-shares__txt>a").on("click", function (e) {
+		e.preventDefault();
+		$(".top-shares").hide();
 	});
 
+
+	// $(".sticky").sticky({
+	// 	topSpacing: 0,
+	// 	widthFromWrapper: false
+	// });
+
 	// пример анимации через библиотечку animat (но лучше анимировать через GSAP)
-	$('.our_advantages h2').animated("fadeInUp");
+	//$('.our_advantages h2').animated("fadeInUp");
 	// инициализация tooltipster
 	if (window.matchMedia("(min-width: 992px)").matches) {
-		$(".header__modal a").tooltipster({
-			plugins: ['follower'],
-			theme: 'tooltipster-shadow'
-		});
-		$(".header__logo a").tooltipster({
-			theme: 'tooltipster-light'
-		});
+		// $(".header__modal a").tooltipster({
+		// 	plugins: ['follower'],
+		// 	theme: 'tooltipster-shadow'
+		// });
 	}
 	//  Активация слайдера
 	$(".owl-carousel").owlCarousel({
@@ -34,17 +38,7 @@ $(document).ready(function () {
 		dots: true,
 		nav: true
 	});
-	// инициализация select2
-	$(".select2").select2({
-		//minimumResultsForSearch: -1, // выключам поле ввода поиска
-		tags: false,
-		width: null
-	});
-	$(".select2-tags").select2({
-		tags: true,
-		placeholder: "Выберите один или несколько тегов",
-		width: null // если null то будет шириной родителя
-	});
+
 	// Инициализация маски в input
 	$(".mask").mask("+38(999) 999-99-99");
 });

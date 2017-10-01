@@ -5,19 +5,341 @@ block main
 	section.top-section
 		.container
 			.row
-				.top-section__title
+				.top-section__title.col-12
 					h1
-						span ФУНКЦИОНАЛЬНЫЕ
-						|  ЛЕНДИНГИ НА ЗАКАЗ
-					p для максимального удобства
-				.top-section__bot-txt
-					p.sticky Более
-						span  400
-						|   довольных клиентов за
-						span  8 лет
-						|  успешной работы!
-				.top-section__circle
-					include ../../img/svg_circle.svg
+						| Алена Дружинина.
+					p Предприниматель. Бизнес-тренер. Маркетолог-консультант.
+				.top-section__bot-txt.col-12
+					p
+						| Получите 2 видео «Как найти свою нишу» и «Основные ошибки,
+						br
+						| которые вы можете сделать при старте бизнеса»,
+						br
+						| плюс бонус от меня прямо сейчас.
+				form
+					.top-section__input-wrap
+						.col-4
+							input(type="text", name="name", placeholder='Введите ваше имя')
+						.col-4
+							input(type="text", name="email", placeholder='Введите ваш e-mail')
+					.col-4
+						button(type="submit").main_btn Получить 2 видео и бонус
+	// Секция Who am I
+	section#who-am-i.who-am-i
+		.container
+			.title
+				h2
+					span К
+					| то я?
+				p
+					| Думаю, тот факт, что я более 15 лет в маркетинге и продажах, имею 10 летний опыт управления,
+					br
+					| и несколько собственных бизнесов за спиной вам ни о чем не скажет.
+					br
+					| Важно другое - что я могу сделать для вас и как эффективно?
+			.row
+				.who-am-i__photo.col-xl-6
+					img(src=require("../../img/who-am-i__photo.jpg"))
+				.who-am-i__txt-wrap.col-xl-6
+					h3
+						| Я построила несколько бизнесов с нуля и знаю не по наслышке:
+					.who-am-i__txt-item
+						.who-am-i__txt-item-img
+							img(src=require("../../img/who-am-i__txt-item-img-pie-chart.png"))
+						.who-am-i__txt
+							p как найти нишу, которая будет тебя вдохновлять;
+					.who-am-i__txt-item
+						.who-am-i__txt-item-img
+							img(src=require("../../img/who-am-i__txt-item-img-handshake.png"))
+						.who-am-i__txt
+							p как из никому неизвестной компании стать VIP клиентом у нескольких поставщиков сразу;
+					.who-am-i__txt-item
+						.who-am-i__txt-item-img
+							img(src=require("../../img/who-am-i__txt-item-img-store.png"))
+						.who-am-i__txt
+							p как строить оптовые и розничные продажи;
+					.who-am-i__txt-item
+						.who-am-i__txt-item-img
+							img(src=require("../../img/who-am-i__txt-item-img-networking.png"))
+						.who-am-i__txt
+							p как делегировать часть своих ежедневных управленческих функций сотрудникам;
+					.who-am-i__txt-item
+						.who-am-i__txt-item-img
+							img(src=require("../../img/who-am-i__txt-item-img-target.png"))
+						.who-am-i__txt
+							p
+								| как управлять коллективом более 40 человек, как мотивировать и ставить задачи;
+					.who-am-i__txt-item
+						.who-am-i__txt-item-img
+							img(src=require("../../img/who-am-i__txt-item-img-puzzle.png"))
+						.who-am-i__txt
+							p
+								| как найти свою команду и уйти от панибратства, когда в
+								| подчинении всего 2 человека;
+					.who-am-i__txt-item
+						.who-am-i__txt-item-img
+							img(src=require("../../img/who-am-i__txt-item-img-browser.png"))
+						.who-am-i__txt
+							p
+								| как разработать продающий сайт, запускать рекламные
+								| кампании в интернет;
+					.who-am-i__txt-item
+						.who-am-i__txt-item-img
+							img(src=require("../../img/who-am-i__txt-item-img-steering-earnings.png"))
+						.who-am-i__txt
+							p
+								| как получать отзывы и конвертировать их в продажи;
+					.who-am-i__txt-item
+						.who-am-i__txt-item-img
+							img(src=require("../../img/who-am-i__txt-item-img-invoice.png"))
+						.who-am-i__txt
+							p
+								| как собирать базу клиентов и монетизировать ее;
+					.who-am-i__txt-item
+						.who-am-i__txt-item-img
+							img(src=require("../../img/who-am-i__txt-item-img-umbrella.png"))
+						.who-am-i__txt
+							p
+								| как потерять десятки тысяч долларов и не опустить руки;
+					.who-am-i__txt-item
+						.who-am-i__txt-item-img
+							img(src=require("../../img/who-am-i__txt-item-img-steering-wheel.png"))
+						.who-am-i__txt
+							p
+								| как из специалиста, профессионала, стать бизнесменом,
+								| и при этом растить 2-х деток (мамам посвящается).
+			.row
+				.col-12.who-am-i__big-title-img
+					p
+						| Весь свой богатый бизнес опыт я аккумулировала и создала онлайн курс
+						span «От старта до первых клиентов».
+						br
+						| Я постоянно повышаю свой уровень, обучаясь как онлайн, так и оффлайн.
+						br
+						| Прежде всего, я практик, и каждый день, развивая своих клиентов, совершенствую и
+						| обогащаю свои знания.
+						br
+						| Я готова поделиться накопленным опытом и сформированными навыками с вами,
+						| рассказать как строю бизнес сама и как это делают мои клиенты.
+	// Секция  Author's online courses
+	section.authors-online-courses
+		.container
+			.title
+				h2
+					span А
+					| вторские онлайн-курсы Алены Дружининой
+
+			.authors-online-courses__items
+				.authors-online-courses__item
+					.row
+						.col-xl-5
+							.authors-online-courses__item-img
+								.authors-online-courses__corner-top.corner-line
+									img(src=require("../../img/authors-online-courses__item-topleft.png"))
+								.authors-online-courses__corner-bot.corner-line
+									img(src=require("../../img/authors-online-courses__item-bot.png"))
+								img(src=require("../../img/authors-online-courses__item-img.png"))
+						.col-xl-7
+							.authors-online-courses__item-txt
+								h3 «От старта до первых продаж»
+								p
+									| Не  буду вам врать и говорить о сверх прибылях, которые вы поучите,
+									| если пройдете мой курс, о быстром взлете, ведении успешного бизнеса,
+									| уделяя ему всего 2 часа в день. Я расскажу вам правду.
+								p
+									| Покажу как есть на самом деле. Укажу типичные ошибки.
+									| Поэтапно вместе с вами пройду весь путь от поиска ниши, до создания
+									| лендинга и первых продаж, дам личные рекомендации о дальнейшем
+									| развитии.
+								p
+									| Конструктивно покритикую,  подбодрю, замотивирую, когда нужно будет.
+									| Все остальное вы сделаете сами. И тем ценнее опыт, который вы получите.
+								p
+									| Минимум теории, максимум практики.
+								p
+									| Пришло время действовать!  Запусти свой бизнес этой осенью! Запишись
+									|  на курс
+									span «От старта до первых продаж»
+									| и считай свою прибыль уже через
+									| 1,5 месяца!
+									|
+								.authors-online-courses__item-txt-bot-btn
+									button.main_btn Записаться на курс
+									a(href="#") Узнать подробнее
+										img(src=require("../../img/authors-online-courses__item-right-arrow.png"))
+				.authors-online-courses__item
+					.row
+						.col-xl-5.push-xl-7
+							.authors-online-courses__item-img
+								.authors-online-courses__corner-top.corner-line
+									img(src=require("../../img/authors-online-courses__item-topleft.png"))
+								.authors-online-courses__corner-bot.corner-line
+									img(src=require("../../img/authors-online-courses__item-bot.png"))
+								img(src=require("../../img/authors-online-courses__item-img2.png"))
+						.col-xl-7.pull-xl-5
+							.authors-online-courses__item-txt
+								h3 «Вся кухня интернет-маркетинга»
+								p
+									| Не  буду вам врать и говорить о сверх прибылях, которые вы поучите,
+									| если пройдете мой курс, о быстром взлете, ведении успешного бизнеса,
+									| уделяя ему всего 2 часа в день. Я расскажу вам правду.
+								p
+									| Покажу как есть на самом деле. Укажу типичные ошибки.
+									| Поэтапно вместе с вами пройду весь путь от поиска ниши, до создания
+									| лендинга и первых продаж, дам личные рекомендации о дальнейшем
+									| развитии.
+								p
+									| Конструктивно покритикую,  подбодрю, замотивирую, когда нужно будет.
+									| Все остальное вы сделаете сами. И тем ценнее опыт, который вы получите.
+								p
+									| Минимум теории, максимум практики.
+								p
+									| Пришло время действовать!  Запусти свой бизнес этой осенью! Запишись
+									|  на курс
+									span «От старта до первых продаж»
+									| и считай свою прибыль уже через
+									| 1,5 месяца!
+									|
+								.authors-online-courses__item-txt-bot-btn
+									button.main_btn Записаться на курс
+									a(href="#") Узнать подробнее
+										img(src=require("../../img/authors-online-courses__item-right-arrow.png"))
+				.authors-online-courses__item
+					.row
+						.col-xl-5
+							.authors-online-courses__item-img
+								.authors-online-courses__corner-top.corner-line
+									img(src=require("../../img/authors-online-courses__item-topleft.png"))
+								.authors-online-courses__corner-bot.corner-line
+									img(src=require("../../img/authors-online-courses__item-bot.png"))
+								img(src=require("../../img/authors-online-courses__item-img3.png"))
+						.col-xl-7
+							.authors-online-courses__item-txt
+								h3 «Хороший клев не обеспечит улов. Школа продаж»
+								p
+									| Не  буду вам врать и говорить о сверх прибылях, которые вы поучите,
+									| если пройдете мой курс, о быстром взлете, ведении успешного бизнеса,
+									| уделяя ему всего 2 часа в день. Я расскажу вам правду.
+								p
+									| Покажу как есть на самом деле. Укажу типичные ошибки.
+									| Поэтапно вместе с вами пройду весь путь от поиска ниши, до создания
+									| лендинга и первых продаж, дам личные рекомендации о дальнейшем
+									| развитии.
+								p
+									| Конструктивно покритикую,  подбодрю, замотивирую, когда нужно будет.
+									| Все остальное вы сделаете сами. И тем ценнее опыт, который вы получите.
+								p
+									| Минимум теории, максимум практики.
+								p
+									| Пришло время действовать!  Запусти свой бизнес этой осенью! Запишись
+									|  на курс
+									span «От старта до первых продаж»
+									| и считай свою прибыль уже через
+									| 1,5 месяца!
+									|
+								.authors-online-courses__item-txt-bot-btn
+									button.main_btn Записаться на курс
+									a(href="#") Узнать подробнее
+										img(src=require("../../img/authors-online-courses__item-right-arrow.png"))
+
+	// Секция  department-for-rent
+	section.department-for-rent
+		.container
+			.row
+				.department-for-rent__inner-block
+					h2 Возьмите наш отдел маркетинга в оренду!
+	// Секция  our-knowledge-is-working-for-you
+	section.our-knowledge-is-working-for-you
+		.container
+			.title
+				h2
+					span Х
+					| отите, чтобы наш богатый опыт и знания работали на вас?
+				p
+					| За долгие 15 лет в маркетинге, продажах и бизнесе я не только получила колоссальный опыт,
+					br
+					| я еще и обзавелась огромной базой подрядчиков, проверенных в работе и полученных результатах,
+					br
+					| собрала команду «молодых и голодных» специалистов. Каждый профи в своей теме.
+					br
+					| Хотите, чтобы наш богатый опыт и знания в маркетинге работали на вас?
+			.row
+				.col-12.who-am-i__big-title-img.marketing
+					.who-am-i__big-title__wrap
+						p
+							|     Возьмите наш отдел маркетинга в аренду, а время и деньги, которые вы раньше
+							| тратили на управление собственным отделом маркетинга, вложите в развитие своей
+							| компании/бренда.
+	// Секция Who am I 2
+	section#who-am-i2.who-am-i
+		.container
+			.row
+				.who-am-i__photo.col-xl-6.push-xl-6
+					img(src=require("../../img/who-am-i__photo2.jpg"))
+				.who-am-i__txt-wrap.col-xl-6.pull-xl-6
+					h3
+						| Возьмите наш отдел маркетинга в аренду, и вы…
+					.who-am-i__txt-item
+						.who-am-i__txt-item-img
+							img(src=require("../../img/who-am-i__txt-item-img-team.png"))
+						.who-am-i__txt
+							p
+								| економите, ненужно больше нанимать в штат на
+								| постоянную работу кучу сотрудников и платить за них
+								| налоги, оплачивать больничные и декретный отпуск;
+					.who-am-i__txt-item
+						.who-am-i__txt-item-img
+							img(src=require("../../img/who-am-i__txt-item-img-search.png"))
+						.who-am-i__txt
+							p
+								| точечно, под конкретную задачу приглашаете нужных в
+								| данный момент специалистов;
+					.who-am-i__txt-item
+						.who-am-i__txt-item-img
+							img(src=require("../../img/who-am-i__txt-item-img-idea.png"))
+						.who-am-i__txt
+							p
+								| перестаете думать о том, как выстраивать взаимоотношения
+								| в коллективе, мотивировать сотрудников;
+					.who-am-i__txt-item
+						.who-am-i__txt-item-img
+							img(src=require("../../img/who-am-i__txt-item-img-shirt.png"))
+						.who-am-i__txt
+							p
+								| прячете свое сито, через которое раньше отсеивали
+								| кандидатов, забудете про испытательный срок для нового
+								| маркетолога и тестовом задании для smm-специалиста;
+					.who-am-i__txt-item
+						.who-am-i__txt-item-img
+							img(src=require("../../img/who-am-i__txt-item-img-gear.png"))
+						.who-am-i__txt
+							p
+								| оберегаете себя от ошибок и финансовых потерь, которые
+								| допускают «зеленые» кадры;
+					.who-am-i__txt-item
+						.who-am-i__txt-item-img
+							img(src=require("../../img/who-am-i__txt-item-img-summary.png"))
+						.who-am-i__txt
+							p
+								| забываете, что есть такая статья расходов «обучение
+								| сотрудников отдела маркетинга»;
+					.who-am-i__txt-item
+						.who-am-i__txt-item-img
+							img(src=require("../../img/who-am-i__txt-item-img-director-desk.png"))
+						.who-am-i__txt
+							p
+								| перестанете задаваться вопросом: «а что все эти сотрудники
+								| отдела маркетинга там делают?».
+
+
+	// Секция  info-block
+	section.info-block
+		.container
+			.row
+				p
+					| Все работу по поиску, отсеиванию, тестированию и обучению специалистов отдела маркетинга мы уже сделали,
+					| вам же предлагаем только все самое ценное и нужное. Возьмите наш отдел маркетинга в аренду
+					| и получайте запланированный результат уже сегодня! Воспользуйтесь одним из предложенных пакетных решений.
 	// Секция  our_advantages
 	section#our_advantages.our-advantages
 		.container
@@ -55,10 +377,6 @@ block main
 						i.fa.fa-wrench
 					h3 Заголовок
 					p Изготовление мебели только из высококачественных материалов
-	// Тест react
-	section.react
-		.container
-			#app
 	// Секция main_content
 	section.main_content
 		.container
