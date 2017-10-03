@@ -650,6 +650,8 @@ nav[canvas]
 			border: 1px solid $main_color
 	p
 		@include font($main_txt_color, 18, $font_OpenSansLight, 1.2)
+		span
+			font-family: $font_OpenSansSemiBold
 //	Секция who-am-i
 .who-am-i
 	background-color: #fff
@@ -666,6 +668,7 @@ nav[canvas]
 		margin-right: 20px
 	.who-am-i__txt
 		@include font($main_txt_color, 18, $font_OpenSansLight, 1.2)
+
 .who-am-i__big-title-img
 	padding-left: 50px
 	position: relative
@@ -775,6 +778,9 @@ nav[canvas]
 	background: #fff url(../img/info-block__bg.jpg) center top no-repeat
 	background-size: cover
 	p
+		text-align: center
+		padding-left: 15px
+		padding-right: 15px
 		@include font($main_txt_color, 18, $font_OpenSansBold, 1.2)
 // Секция  rates
 .rates
@@ -897,6 +903,7 @@ nav[canvas]
 // Секция  my services
 .my-services
 	background-color: #fff
+	padding-bottom: 80px
 	.my-services__item
 		height: 370px
 		margin-bottom: 30px
@@ -923,27 +930,26 @@ nav[canvas]
 		p
 			flex-basis: auto
 			@include font($main_txt_color, 16, $font_OpenSansLight, 1.2)
-		a
-			color: $main_color
-			@include fz(18)
-			&:hover
-				text-decoration: none
-			&:hover img
-				transform: translateX(20px)
-			&:active
-				text-decoration: none
-			&:focus
-				text-decoration: none
-			img
-				margin-left: 10px
-				transform: translateX(0)
-				transition: 0.5s
+	a
+		color: $main_color
+		@include fz(18)
+		&:hover
+			text-decoration: none
+		&:hover img
+			transform: translateX(20px)
+		&:active
+			text-decoration: none
+		&:focus
+			text-decoration: none
+		img
+			margin-left: 10px
+			transform: translateX(0)
+			transition: 0.5s
 			
 // Секция our_advantages
 .our-advantages
 	min-height: 630px
 	background-color: #fff
-	padding-top: 75px
 	.our-advantages__title
 		margin-bottom: 10px
 		text-align: center
@@ -967,17 +973,7 @@ nav[canvas]
 			i
 				@include fz(72)
 				color: #00b6f4
-// Секция main_content
-.main_content
-	text-align: center
-	.owl-carousel.owl-drag .owl-item
-		min-height: 300px
-		background-color: #00b6f4
-		display: flex
-		align-items: center
-		justify-content: center
-	.select2-container
-		width: 300px
+
 // Пример checkbox
 label.check, label.radio
 	display: inline-flex
@@ -1008,15 +1004,11 @@ label.check, label.radio
 	text-align: center
 	background-color: #ececec
 	padding-bottom: 80px
-	.intermediate_title
-		max-width: 650px
-		margin: auto
-		color: #052243
-		h3
-			margin: 0
-			text-transform: uppercase
-			@include fz(24)
-			color: #052243
+	&.any-questions
+		.intermediate_item
+			input[type=submit]
+				position: relative
+				top: -26px
 	.intermediate_wrap
 		margin-top: 40px
 		.intermediate_item
@@ -1050,19 +1042,167 @@ label.check, label.radio
 					color: #353535
 			input[type=submit]
 				@include fz(18)
-//	Секция
-//	Секция
-//	Секция 
-//	Секция 
-//	Секция
-//	Секция
+// Внешний вид dots
+.owl-theme
+	.owl-dots
+		.owl-dot
+			vertical-align: middle
+			span
+				width: 14px
+				height: 14px
+				background: $main_txt_color
+				transition: 0.3s
+			&.active
+				span
+					background: $main_color
+		.owl-dot:hover
+			span
+				background: $main_color
+	.owl-nav.disabled+.owl-dots
+		margin-top: 30px
+//	Секция .reviews-of-my-clients
+.reviews-of-my-clients
+	background-color: #fff
+	padding-bottom: 80px
+	.reviews-of-my-clients__slider-img
+		width: 100%
+		margin-bottom: 40px
+		iframe
+			min-height: 320px
+.reviews-of-my-clients__slider,.my-clients__slider
+	p
+		@include font($main_txt_color, 18, $font_OpenSansLight, 1.2)
+		&.reviews-of-my-clients__slider-title
+			font-family: $font_OpenSansSemiBold
+		&.my-clients__slider__slider-title
+			font-family: $font_OpenSansSemiBold
+			margin-bottom: 20px
+		&.my-clients__slider__slider-title+p
+			margin-bottom: auto
+//	Секция .my-clients
+.my-clients
+	background-color: #f1f1f1
+	padding-bottom: 80px
+	.my-clients__slider
+		text-align: center
+		.item
+			min-height: 275px
+			display: flex
+			flex-direction: column
+			padding-left: 15px
+			padding-right: 15px
+			a
+				color: $main_color
+				&:hover
+					text-decoration: none
+				&:hover img
+					transform: translateX(20px)
+				&:active
+					text-decoration: none
+				&:focus
+					text-decoration: none
+				img
+					margin-left: 10px
+					transform: translateX(0)
+					transition: 0.5s
+				img
+					display: inline-block
+	.my-clients__slider__slider-img
+		margin-bottom: 40px
+		text-align: center
+		align-items: center
+		justify-content: center
+	.owl-carousel
+		.owl-item
+			img
+				max-width: 100%
+				width: inherit
+				margin: auto
+//	Секция .upcoming-events
+.upcoming-events
+	background-color: #fff
+	padding-bottom: 80px
+	.upcoming-events__item-txt
+		height: 100%
+		display: flex
+		flex-direction: column
+		h3
+			text-indent: 35px
+			margin-bottom: 20px
+			@include font($main_txt_color, 18, $font_OpenSansRegular, 1.2)
+		p
+			margin-bottom: 20px
+			text-indent: 35px
+			@include font($main_txt_color, 18, $font_OpenSansLight, 1.2)
+			&:last-of-type
+				margin-bottom: auto
+		a
+			line-height: 47px
+			display: inline-block
 
+//	Секция .recent-blog-posts
+.recent-blog-posts
+	background-color: #fff
+	padding-bottom: 50px
+	.recent-blog-posts__item
+		margin-bottom: 30px
+	.recent-blog-posts__item-txt
+		background: #f1f1f1
+		padding: 20px
+		h3
+			@include font($main_txt_color, 18, $font_OpenSansSemiBold, 1.2)
+		p
+			@include font($main_txt_color, 18, $font_OpenSansLight, 1.2)
+			margin-bottom: 10px
+		a
+			color: $main_color
+			&:hover
+				text-decoration: none
+			&:hover img
+				transform: translateX(20px)
+			&:active
+				text-decoration: none
+			&:focus
+				text-decoration: none
+			img
+				margin-left: 10px
+				transform: translateX(0)
+				transition: 0.5s
+			img
+				display: inline-block
+// Секция .social
+.social
+	background: #fff url(../img/social-bg.jpg) center top no-repeat
+	background-size: cover
+	padding-top: 40px
+	padding-bottom: 40px
+.social__title
+	text-align: center
+	@include font($main_txt_color, 18, $font_OpenSansSemiBold, 1.2)
+	margin-bottom: 30px
+.social__links
+	text-align: center
+	a
+		margin-right: 75px
+		position: relative
+		top: 0
+		transition: 0.5s
+		&:last-of-type
+			margin-right: 0
+		&:hover
+			top: -5px
+//	Секция
 
 // Секия footer 
 .footer
-	background-color: #333
-	height: 200px
-	flex: 0 0 auto
+	background-color: #fff
+	height: 100px
+	display: flex
+	align-items: center
+	justify-content: center
+	text-align: center
+	p
+		@include font($main_txt_color, 18, $font_OpenSansLight, 1.2)
 
 
 

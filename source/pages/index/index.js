@@ -32,13 +32,55 @@ $(document).ready(function () {
 		// });
 	}
 	//  Активация слайдера
-	$(".owl-carousel").owlCarousel({
+	$(".reviews-of-my-clients__slider .owl-carousel").owlCarousel({
 		loop: true,
-		items: 1,
+		items: 2,
 		dots: true,
-		nav: true
+		responsive: {
+			0: {
+				items: 1
+			},
+			768: {
+				items: 1
+			},
+			992: {
+				items: 1
+			},
+			1200: {
+				items: 2
+			}
+		}
 	});
-
+	$(".my-clients__slider .owl-carousel").owlCarousel({
+		loop: true,
+		items: 3,
+		dots: true,
+		responsive: {
+			0: {
+				items: 1
+			},
+			768: {
+				items: 1
+			},
+			992: {
+				items: 2
+			},
+			1200: {
+				items: 3
+			}
+		}
+	});
+	// Ограничиваем количество симоволов в параграфе
+	$.each($(".recent-blog-posts .recent-blog-posts__item-txt p"), function () {
+		var self = $(this).text();
+		var str = self.slice(0, 165); //например макс 100 символов
+		var a = str.split(' ');
+		a.splice(a.length - 1, 1);
+		str = a.join(' ');
+		if (self.length >= 165) {
+			$(this).html(str + ' ...');
+		}
+	});
 	// Инициализация маски в input
 	$(".mask").mask("+38(999) 999-99-99");
 });

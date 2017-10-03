@@ -17,6 +17,14 @@
 	// для фиксированного сайта
 	// body
 	// 	width: 1200px
+	.header
+		padding-top: 15px
+		padding-bottom: 15px
+		min-height: 85px
+	.header__logo
+		display: block
+		margin-top: 0
+		margin: auto
 	.header__modal
 		margin-top: 20px
 	.intermediate
@@ -27,21 +35,42 @@
 	.authors-online-courses
 		.authors-online-courses__item-img
 			margin-bottom: 30px
+			padding-left: 20px
+			padding-right: 20px
 		.authors-online-courses__item
 			p:last-of-type
 				margin-bottom: 20px
+	.who-am-i__photo,.upcoming-events__item-img
+		img
+			display: block
+			max-width: 100%
+			height: auto
+			margin: 0 auto 20px
+	.upcoming-events .upcoming-events__item-txt p:last-of-type
+		margin-bottom: 20px
+	.upcoming-events
+		.upcoming-events__item-txt
+			.col-6
+				margin: auto
+				display: block
+	.social__title
+		br
+			display: none
+
 // Medium devices (tablets, less than 992px)
 @media only screen and (max-width : 991px)
 	/**/
 	.header__nav
 		display: none
-	.header__logo
-		display: block
-		margin-top: 0
 	.header__modal
 		margin-top: 40px
 	nav[canvas]
 		display: block
+	.rates .table-rates thead th:nth-child(n+2)
+		width: 110px
+		@include fz(14)     
+	.rates .table-rates thead th.empty
+		width: 20px
 // Small devices (landscape phones, less than 768px)
 @media only screen and (max-width : 767px)
 	
@@ -83,6 +112,23 @@
 	.white-popup
 		textarea
 			min-height: 80px
+	html, body
+		font-size: 14px
+	.intermediate.any-questions .intermediate_item input[type=submit]
+		position: static
+	.rates
+		.table-rates
+			thead
+				th:nth-child(n+2)
+					width: 80px
+				th.empty
+					width: 10px
+			tbody
+				td:first-of-type
+					padding-left: 10px
+	.social__links
+		a
+			margin-right: 30px
 // Extra small devices (portrait phones, less than 576px)
 @media only screen and (max-width : 575px)
 	/**/
