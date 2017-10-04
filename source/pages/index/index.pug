@@ -18,11 +18,11 @@ block main
 						| плюс бонус от меня прямо сейчас.
 				form
 					.top-section__input-wrap
-						.col-4
+						.col-8.col-sm-7.col-md-4
 							input(type="text", name="name", placeholder='Введите ваше имя')
-						.col-4
+						.col-8.col-sm-7.col-md-4
 							input(type="text", name="email", placeholder='Введите ваш e-mail')
-					.col-4
+					.col-8.col-sm-7.col-md-4
 						button(type="submit").main_btn Получить 2 видео и бонус
 	// Секция Who am I
 	section#who-am-i.who-am-i
@@ -351,6 +351,8 @@ block main
 					thead
 						tr
 							th
+								p.table-rates__hidden Листайте таблицу
+									img(src=require("../../img/authors-online-courses__item-right-arrow.png"))
 							th На старте
 							th.empty
 							th Быстрое развитие
@@ -629,21 +631,21 @@ block main
 			.intermediate_wrap
 				form
 					.row
-						.intermediate_item.col-xl-4.col-lg-4.col-md-4.col-sm-4
+						.intermediate_item.col-xl-4.col-lg-4.col-md-6.col-sm-12
 							.input_wrap
 								i.fa.fa-check
 								input(name='name', type='text', placeholder='Введите ваше имя')
-						.intermediate_item.col-xl-4.col-lg-4.col-md-4.col-sm-4
+						.intermediate_item.col-xl-4.col-lg-4.col-md-6.col-sm-12
 							.input_wrap
 								i.fa.fa-check
 								input(name='email', type='text', placeholder='Введите ваш e-mail')
-						.intermediate_item.col-xl-4.col-lg-4.col-md-4.col-sm-4
+						.intermediate_item.col-xl-4.col-lg-4.col-md-6.col-sm-12
 							.input_wrap
 								i.fa.fa-check
 								input(name='websiteAddress', type='text', placeholder='Введите адрес сайта')
 						input(type='hidden', name='form_name', value='')
 						input(type='hidden', name='form_type', value='normal')
-						.intermediate_item.col-xl-4
+						.intermediate_item.col-xl-4.col-lg-8.col-md-8.col-sm-12
 							input(type='submit', value='Получить аудит сайта бесплатно', class='main_btn')
 	// Секция  video-on-YouTube
 	section.video-on-YouTube
@@ -696,25 +698,31 @@ block main
 								| enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
 								| sed quia consequuntur magni dolores eos qui ratione voluptatem
 								| sequi nesciunt.
-							.conference-for-internet-marketing__text-button
+							.conference-for-internet-marketing__text-button.hidden-text-button
 								button(type="text" class="main_btn") Записаться
 								a(href="#") Читать подробнее
 									img(src=require("../../img/authors-online-courses__item-right-arrow.png"))
 					.col-xl-6
 						.conference-for-internet-marketing__img
 						.row
-							.col-12.col-md-6.conference-for-internet-marketing__img-item
-								img(src=require("../../img/conference-for-internet-marketing__img.jpg"))
-							.col-12.col-md-6.conference-for-internet-marketing__img-item
-								img(src=require("../../img/conference-for-internet-marketing__img2.jpg"))
-							.col-12.col-md-6.conference-for-internet-marketing__img-item
-								img(src=require("../../img/conference-for-internet-marketing__img3.jpg"))
-							.col-12.col-md-6.conference-for-internet-marketing__img-item
-								img(src=require("../../img/conference-for-internet-marketing__img4.jpg"))
-							.col-12.col-md-6.conference-for-internet-marketing__img-item
-								img(src=require("../../img/conference-for-internet-marketing__img5.jpg"))
-							.col-12.col-md-6.conference-for-internet-marketing__img-item
-								img(src=require("../../img/conference-for-internet-marketing__img6.jpg"))
+							.col-6.col-sm-6.col-md-6.col-lg-4.col-xl-6.conference-for-internet-marketing__img-item
+								img(src=require("../../img/conference-for-internet-marketing__img.jpg") class="img-fluid")
+							.col-6.col-sm-6.col-md-6.col-lg-4.col-xl-6.conference-for-internet-marketing__img-item
+								img(src=require("../../img/conference-for-internet-marketing__img2.jpg") class="img-fluid")
+							.col-6.col-sm-6.col-md-6.col-lg-4.col-xl-6.conference-for-internet-marketing__img-item
+								img(src=require("../../img/conference-for-internet-marketing__img3.jpg") class="img-fluid")
+							.col-6.col-sm-6.col-md-6.col-lg-4.col-xl-6.conference-for-internet-marketing__img-item
+								img(src=require("../../img/conference-for-internet-marketing__img4.jpg") class="img-fluid")
+							.col-6.col-sm-6.col-md-6.col-lg-4.col-xl-6.conference-for-internet-marketing__img-item
+								img(src=require("../../img/conference-for-internet-marketing__img5.jpg") class="img-fluid")
+							.col-6.col-sm-6.col-md-6.col-lg-4.col-xl-6.conference-for-internet-marketing__img-item
+								img(src=require("../../img/conference-for-internet-marketing__img6.jpg") class="img-fluid")
+							.col-12
+								.conference-for-internet-marketing__text-button
+									button(type="text" class="main_btn") Записаться
+									a(href="#") Читать подробнее
+										img(src=require("../../img/authors-online-courses__item-right-arrow.png"))
+
 	// Секция  my services
 	section.my-services
 		.container
@@ -843,21 +851,21 @@ block main
 			.intermediate_wrap
 				form
 					.row
-						.intermediate_item.col-xl-4.col-lg-4.col-md-4.col-sm-4
+						.intermediate_item.col-xl-4.col-lg-4.col-md-6.col-sm-12
 							.input_wrap
 								i.fa.fa-check
 								input(name='name', type='text', placeholder='Введите ваше имя')
-						.intermediate_item.col-xl-4.col-lg-4.col-md-4.col-sm-4
+						.intermediate_item.col-xl-4.col-lg-4.col-md-6.col-sm-12
 							.input_wrap
 								i.fa.fa-check
 								input(name='email', type='text', placeholder='Введите ваш e-mail')
-						.intermediate_item.col-xl-4.col-lg-4.col-md-4.col-sm-4
+						.intermediate_item.col-xl-4.col-lg-4.col-md-6.col-sm-12
 							.input_wrap
 								i.fa.fa-check
 								input(name='phone_mask', type='text', class="mask", placeholder="+38(___) ___-__-__")
 						input(type='hidden', name='form_name', value='')
 						input(type='hidden', name='form_type', value='normal')
-						.intermediate_item.col-xl-4
+						.intermediate_item.col-xl-4.col-lg-8.col-md-8.col-sm-12
 							input(type='submit', value='Стать частью команды', class='main_btn')
 	// Секция  Reviews of my clients
 	section.reviews-of-my-clients
@@ -1002,11 +1010,11 @@ block main
 									| Lorem ipsum dolor sit amet, consectetur adipisicing elit,
 									| sed do eiusmod tempor incididunt ut labore et dolore magna
 								a(href="#") Читать подробнее
-									img(src=require("../../img/authors-online-courses__item-right-arrow-orange.png") class="img-fluid" )
+									img(src=require("../../img/authors-online-courses__item-right-arrow-orange.png"))
 					.col-12.col-lg-6
 						.recent-blog-posts__item
 							.recent-blog-posts__item-img
-								img(src=require("../../img/recent-blog-posts__item-img2.jpg"))
+								img(src=require("../../img/recent-blog-posts__item-img2.jpg") class="img-fluid")
 							.recent-blog-posts__item-txt
 								h3
 									| 1-2 сентября 2017 года состоится конференция по

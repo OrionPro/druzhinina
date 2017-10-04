@@ -318,10 +318,10 @@ li
 // Бутерброд
 .no-touch #nav-button-label
 	&:hover .nav-line
-		background: $main_bg_color
+		background: $main_color
 .touch #nav-button-label
 	&:active .nav-line
-		background: $main_bg_color
+		background: $main_color
 #nav-button-label
 	height: 35px
 	width: 50px
@@ -369,7 +369,7 @@ label
 .nav-line
 	display: block
 	height: 3px
-	background: #fff
+	background: $main_txt_color
 	position: absolute
 	left: 0
 	width: 100%
@@ -446,6 +446,7 @@ label
 	transition: transform 0.4s
 	overflow: auto
 	-webkit-overflow-scrolling: touch
+	background-color: $main_txt_color
 [off-canvas*=left]
 	width: 255px
 [canvas=container]
@@ -469,7 +470,7 @@ label
 			background-color: transparent
 nav[canvas]
 	position: fixed	
-	top: 20px
+	top: 30px
 	left: 20px
 	display: none
 	z-index: 100
@@ -479,9 +480,12 @@ nav[canvas]
 	ul
 		&.menu
 			margin: 0
-			padding: 0
+			padding: 50px 0 0 30px
 			display: block
 			list-style: none
+			li
+				a
+					color: #fff
 // Секция top-shares
 .top-shares
 	height: 50px
@@ -495,9 +499,13 @@ nav[canvas]
 		display: flex
 		align-items: center
 		justify-content: center
-		&>a
-			display: inline-flex
-			margin-right: 20px
+		.top-shares__txt-inner
+			display: flex
+			align-items: center
+			justify-content: center
+			&>a
+				display: inline-flex
+				margin-right: 20px
 		p
 			@include font($main_color, 14, $font_OpenSansRegular, 1.2)
 			margin-right: 20px
@@ -526,7 +534,7 @@ nav[canvas]
 	min-height: 110px
 	padding-top: 30px
 	padding-bottom: 30px
-	background-color: transparent
+	background-color: #fff
 	.row
 		align-items: center
 .header__logo
@@ -593,6 +601,7 @@ nav[canvas]
 		flex-direction: column
 	.top-section__input-wrap
 		display: flex
+		flex-wrap: wrap
 		margin-bottom: 40px
 		input
 			width: 100%
@@ -802,6 +811,12 @@ nav[canvas]
 				&.empty
 					width: 30px
 					background: transparent
+				p
+					&.table-rates__hidden
+						display: none
+						img
+							margin-left: 10px
+
 		tbody
 			border: 0.3px inset #c4c4c4
 			@include font($main_txt_color, 14, $font_OpenSansLight, 1.2)
@@ -871,8 +886,10 @@ nav[canvas]
 			&:last-of-type
 				margin-bottom: auto
 	.conference-for-internet-marketing__text-button
-		display: flex
-		align-items: center
+		display: none
+		&.hidden-text-button
+			display: flex
+			align-items: center
 		button
 			width: 270px
 			margin-right: 30px
@@ -895,9 +912,10 @@ nav[canvas]
 				transform: translateX(0)
 	.conference-for-internet-marketing__img-item
 		margin-bottom: 30px
-		&:nth-last-of-type(2)
+		text-align: center
+		&:nth-last-of-type(3)
 			margin-bottom: 0
-		&:nth-last-of-type(1)
+		&:nth-last-of-type(2)
 			margin-bottom: 0
 
 // Секция  my services
@@ -1146,6 +1164,9 @@ label.check, label.radio
 	padding-bottom: 50px
 	.recent-blog-posts__item
 		margin-bottom: 30px
+	.recent-blog-posts__item-img
+		text-align: center
+		background-color: #353535
 	.recent-blog-posts__item-txt
 		background: #f1f1f1
 		padding: 20px

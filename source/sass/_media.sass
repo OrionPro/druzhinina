@@ -56,6 +56,33 @@
 	.social__title
 		br
 			display: none
+	.who-am-i__big-title-img
+		padding-left: 15px
+		img
+			display: none
+		p
+			transform: skew(0deg)
+		.who-am-i__big-title__wrap
+			width: 100%
+			height: 100%
+			padding: 40px
+			transform: skew(0deg)
+	.conference-for-internet-marketing
+		.conference-for-internet-marketing__text
+			p:last-of-type
+				margin-bottom: 20px
+		.conference-for-internet-marketing__text-button
+			margin-top: 20px
+			align-items: center
+			justify-content: center
+			display: flex
+			&.hidden-text-button
+				display: none
+		.conference-for-internet-marketing__img-item
+			&:nth-last-of-type(3)
+				margin-bottom: 30px
+			&:nth-last-of-type(2)
+				margin-bottom: 30px
 
 // Medium devices (tablets, less than 992px)
 @media only screen and (max-width : 991px)
@@ -103,9 +130,21 @@
 		margin-top: 40px
 	[off-canvas*=left]
 		width: 255px
-	.react
-		h2
-			font-size: 20px
+	.top-shares
+		height: 100%
+		.top-shares__wrap
+			height: 80px
+		.top-shares__txt
+			flex-direction: column
+			p
+				margin-right: 0
+				@include fz(12)
+				span
+					@include fz(12)
+			.top-shares__txt-inner
+				margin-bottom: 10px
+				&>a
+					margin-right: 10px
 	.file_wrap
 		input
 			width: 80%
@@ -129,10 +168,55 @@
 	.social__links
 		a
 			margin-right: 30px
+	.top-section__title
+		margin-top: 100px
+		h1
+			@include fz(29)
+		p
+			@include fz(25)
+			line-height: 1.2
+	.top-section__bot-txt
+		p
+			@include fz(20)
+	
+	.top-section
+		.top-section__input-wrap
+			margin-bottom: 20px
+			input:first-of-type
+				margin-bottom: 20px
+	.who-am-i
+		.who-am-i__txt-item
+			margin-bottom: 15px
+	.title
+		h2
+			@include fz(25)
+	.authors-online-courses
+		.authors-online-courses__item-img
+			height: 100%
+		.authors-online-courses__item-txt
+			margin-top: 20px
+	.department-for-rent
+		.row
+			min-height: 300px
+	.department-for-rent__inner-block
+		width: 80%
+		height: 100px
+		h2
+			@include fz(23)
+
 // Extra small devices (portrait phones, less than 576px)
 @media only screen and (max-width : 575px)
 	/**/
-
+	.table-rates-wrap
+		overflow: auto
+	.rates
+		.table-rates
+			width: 600px
+			thead
+				th
+					p
+						&.table-rates__hidden
+							display: block
 // Extra small devices (portrait phones, less than 521px)
 @media only screen and (max-width : 520px)
 	/**/
@@ -142,6 +226,14 @@
 	.white-popup
 		input[type=submit]
 			width: 100%
+	.conference-for-internet-marketing .conference-for-internet-marketing__text-button
+		flex-direction: column
+		button
+			margin-bottom: 15px
+	.authors-online-courses .authors-online-courses__item-txt-bot-btn
+		flex-direction: column
+		button
+			margin-bottom: 15px
 // Extra small devices (portrait phones, less than 481px)
 @media only screen and (max-width : 480px)
 	/**/
@@ -152,11 +244,23 @@
 			padding-left: 15px
 			padding-right: 15px
 			font-size: 23px
+	.top-section
+		.main_btn
+			@include fz(14)
 	.intermediate
 		.intermediate_title
 			h3
 				font-size: 20px
-
+	.top-shares
+		.top-shares__wrap
+			height: 80px
+		.top-shares__txt
+			flex-direction: column
+			p
+				margin-right: 0
+				@include fz(10)
+				span
+					@include fz(10)
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/
