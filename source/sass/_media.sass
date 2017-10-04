@@ -83,21 +83,25 @@
 				margin-bottom: 30px
 			&:nth-last-of-type(2)
 				margin-bottom: 30px
+	.header__nav
+		display: none
 
+	nav[canvas]
+		display: block
 // Medium devices (tablets, less than 992px)
 @media only screen and (max-width : 991px)
 	/**/
-	.header__nav
-		display: none
 	.header__modal
 		margin-top: 40px
-	nav[canvas]
-		display: block
 	.rates .table-rates thead th:nth-child(n+2)
 		width: 110px
 		@include fz(14)     
 	.rates .table-rates thead th.empty
 		width: 20px
+	.top-section
+		.main_btn
+			height: 45px
+			font-size: 15px
 // Small devices (landscape phones, less than 768px)
 @media only screen and (max-width : 767px)
 	
