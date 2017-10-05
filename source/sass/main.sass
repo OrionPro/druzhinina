@@ -171,7 +171,7 @@ li
 			color: $main_color
 	input
 		width: 100%
-		height: 40px
+		height: 35px
 		margin-bottom: 10px
 		padding-left: 20px
 		padding-right: 37px
@@ -605,6 +605,7 @@ nav[canvas]
 		margin-bottom: 40px
 		input
 			width: 100%
+			height: 35px
 			padding-left: 10px
 			background-color: transparent
 			border: none
@@ -664,6 +665,7 @@ nav[canvas]
 //	Секция who-am-i
 .who-am-i
 	background-color: #fff
+	padding-bottom: 40px
 	.who-am-i__txt-wrap
 		padding-top: 20px
 		margin-bottom: 50px
@@ -783,7 +785,6 @@ nav[canvas]
 .info-block
 	min-height: 220px
 	padding-bottom: 80px
-	margin-top: 80px
 	background: #fff url(../img/info-block__bg.jpg) center top no-repeat
 	background-size: cover
 	p
@@ -794,6 +795,7 @@ nav[canvas]
 // Секция  rates
 .rates
 	padding-bottom: 80px
+	background: #fff
 	.table-rates
 		width: 100%
 		thead
@@ -1025,21 +1027,22 @@ label.check, label.radio
 	&.any-questions
 		.intermediate_item
 			input[type=submit]
-				position: relative
-				top: -26px
 	.intermediate_wrap
-		margin-top: 40px
+		.row
+			align-items: flex-end
 		.intermediate_item
-			margin-bottom: 40px
 			&:last-of-type
-				margin: auto
+				margin: 40px auto 0
+			&.submit
+				&:last-of-type
+					margin: 0 auto 0
 			input:not([type=submit])
 				width: 100%
 				border: none
 				border-bottom: 1px solid #353535
 				background: transparent
 				@include font($main_txt_color, 18.2, $font_OpenSansLight, 1.2)
-				height: 40px
+				height: 35px
 				padding: 0 0 0 9px
 				transition: 0.5s
 				&:hover

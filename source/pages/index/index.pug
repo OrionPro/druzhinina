@@ -21,7 +21,9 @@ block main
 						.col-8.col-sm-7.col-md-4
 							input(type="text", name="name", placeholder='Введите ваше имя')
 						.col-8.col-sm-7.col-md-4
-							input(type="text", name="email", placeholder='Введите ваш e-mail')
+							input(type="email", name="email", placeholder='Введите ваш e-mail')
+					input(type='hidden', name='form_name', value='')
+					input(type='hidden', name='form_type', value='normal')
 					.col-8.col-sm-7.col-md-4.col-lg-4.col-xl-4
 						button(type="submit").main_btn Получить 2 видео и бонус
 	// Секция Who am I
@@ -638,7 +640,7 @@ block main
 						.intermediate_item.col-xl-4.col-lg-4.col-md-6.col-sm-12
 							.input_wrap
 								i.fa.fa-check
-								input(name='email', type='text', placeholder='Введите ваш e-mail')
+								input(name='email', type='email', placeholder='Введите ваш e-mail')
 						.intermediate_item.col-xl-4.col-lg-4.col-md-6.col-sm-12
 							.input_wrap
 								i.fa.fa-check
@@ -858,11 +860,11 @@ block main
 						.intermediate_item.col-xl-4.col-lg-4.col-md-6.col-sm-12
 							.input_wrap
 								i.fa.fa-check
-								input(name='email', type='text', placeholder='Введите ваш e-mail')
+								input(name='email', type='email', placeholder='Введите ваш e-mail')
 						.intermediate_item.col-xl-4.col-lg-4.col-md-6.col-sm-12
 							.input_wrap
 								i.fa.fa-check
-								input(name='phone_mask', type='text', class="mask", placeholder="+38(___) ___-__-__")
+								input(name='phone_mask', type='tel', class="mask", placeholder="+38(___) ___-__-__")
 						input(type='hidden', name='form_name', value='')
 						input(type='hidden', name='form_type', value='normal')
 						.intermediate_item.col-xl-4.col-lg-8.col-md-8.col-sm-12
@@ -1036,17 +1038,17 @@ block main
 			.intermediate_wrap
 				form
 					.row
-						.intermediate_item.col-xl-4.col-lg-4.col-md-4.col-sm-12
+						.intermediate_item.col-xl-4.col-lg-4.col-md-4.col-sm-12.submit
 							.input_wrap
 								i.fa.fa-check
 								input(name='name', type='text', placeholder='Введите ваше имя')
-						.intermediate_item.col-xl-4.col-lg-4.col-md-4.col-sm-12
+						.intermediate_item.col-xl-4.col-lg-4.col-md-4.col-sm-12.submit
 							.input_wrap
 								i.fa.fa-check
 								input(name='phone_mask', type='text', class="mask", placeholder="+38(___) ___-__-__")
 						input(type='hidden', name='form_name', value='')
 						input(type='hidden', name='form_type', value='normal')
-						.intermediate_item.col-xl-4.col-lg-4.col-md-4.col-sm-12
+						.intermediate_item.col-xl-4.col-lg-4.col-md-4.col-sm-12.submit
 							input(type='submit', value='Перезвонить мне', class='main_btn')
 	// Секция .social
 	section.social

@@ -102,6 +102,12 @@
 		.main_btn
 			height: 45px
 			font-size: 15px
+	.intermediate
+		.intermediate_wrap
+			.intermediate_item
+				margin-bottom: 20px
+				&.submit
+					margin-bottom: 0
 // Small devices (landscape phones, less than 768px)
 @media only screen and (max-width : 767px)
 	
@@ -207,7 +213,13 @@
 		height: 100px
 		h2
 			@include fz(23)
-
+	.intermediate
+		.intermediate_wrap
+			.intermediate_item
+				&.submit
+					margin-bottom: 20px
+					&:last-of-type
+						margin-top: 40px
 // Extra small devices (portrait phones, less than 576px)
 @media only screen and (max-width : 575px)
 	/**/
