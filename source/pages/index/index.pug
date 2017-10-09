@@ -3,6 +3,10 @@ block title
 	| Index page
 block main
 	section.top-section
+		.video-wrapper
+			video(poster='../../img/header_bg.jpg', autoplay='autoplay', loop='loop', preload='metadata', muted="muted")
+				source(src=require('../../img/ad_.mp4'), type='video/mp4')
+				source(src=require('../../img/ad_.webm'), type='video/webm')
 		.container
 			.row
 				.top-section__title.col-12
@@ -169,7 +173,7 @@ block main
 									button.main_btn Записаться на курс
 									a(href="#") Узнать подробнее
 										img(src=require("../../img/authors-online-courses__item-right-arrow.png"))
-				.authors-online-courses__item
+				//.authors-online-courses__item
 					.row
 						.col-xl-5.push-xl-7
 							.authors-online-courses__item-img
@@ -206,7 +210,7 @@ block main
 									button.main_btn Записаться на курс
 									a(href="#") Узнать подробнее
 										img(src=require("../../img/authors-online-courses__item-right-arrow.png"))
-				.authors-online-courses__item
+				//.authors-online-courses__item
 					.row
 						.col-xl-5
 							.authors-online-courses__item-img

@@ -3,7 +3,7 @@ module.exports = function(paths) {
 		module: {
 			rules: [
 				{
-					test: /\.(jpg|png|svg|gif|ico)$/,
+					test: /\.(jpg|png|svg|gif|ico|mp4|webm)$/,
 					include: paths,
 					loader: 'file-loader',
 					options: {
