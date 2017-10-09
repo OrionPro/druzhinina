@@ -134,26 +134,7 @@ Glitch Effect
 
 Scribble Effect
 
--------------------------------- */
-.scribble-transition .cd-transition-layer .bg-layer {
-  -webkit-transform: translateY(-50%) translateX(-1.3158%);
-          transform: translateY(-50%) translateX(-1.3158%);
-  /* sprite composed of 38 frames */
-  width: 3800%;
-  background-image: url(../img/anim-modal-scribble.png);
-}
-.scribble-transition .cd-transition-layer.opening .bg-layer {
-  -webkit-animation: cd-sequence-2 0.8s steps(37) forwards;
-          animation: cd-sequence-2 0.8s steps(37) forwards;
-}
-.scribble-transition .cd-transition-layer.closing .bg-layer {
-  -webkit-animation: cd-sequence-2 0.8s steps(37) forwards reverse;
-          animation: cd-sequence-2 0.8s steps(37) forwards reverse;
-}
-.scribble-transition .cd-transition-layer.visible .bg-layer {
-  -webkit-transform: translateY(-50%) translateX(-98.6842%);
-          transform: translateY(-50%) translateX(-98.6842%);
-}
+
 
 /* -------------------------------- 
 

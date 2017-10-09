@@ -69,6 +69,7 @@
 			transform: skew(0deg)
 	.conference-for-internet-marketing
 		.conference-for-internet-marketing__text
+			height: 100%!important
 			p:last-of-type
 				margin-bottom: 20px
 		.conference-for-internet-marketing__text-button
@@ -88,6 +89,16 @@
 
 	nav[canvas]
 		display: block
+	.upcoming-events
+		.upcoming-events__item-txt
+			height: 100%!important
+	.authors-online-courses
+		.authors-online-courses__item-txt
+			height: 100%!important
+	.who-am-i
+		.who-am-i__txt-item
+			&.margin_b
+				margin-bottom: 30px
 // Medium devices (tablets, less than 992px)
 @media only screen and (max-width : 991px)
 	/**/
@@ -99,9 +110,17 @@
 	.rates .table-rates thead th.empty
 		width: 20px
 	.top-section
+		background: #fff url(../../img/header_bg.jpg) no-repeat 64% 0
 		.main_btn
 			height: 45px
 			font-size: 15px
+	.intermediate
+		.intermediate_wrap
+			.intermediate_item
+				margin-bottom: 20px
+				&.submit
+					margin-bottom: 0
+
 // Small devices (landscape phones, less than 768px)
 @media only screen and (max-width : 767px)
 	
@@ -134,6 +153,8 @@
 		margin-top: 40px
 	[off-canvas*=left]
 		width: 255px
+	.top-section
+		background: #fff url(../../img/header_bg.jpg) no-repeat 72% 0
 	.top-shares
 		height: 100%
 		.top-shares__wrap
@@ -184,6 +205,7 @@
 			@include fz(20)
 	
 	.top-section
+		padding-bottom: 80px
 		.top-section__input-wrap
 			margin-bottom: 20px
 			input:first-of-type
@@ -191,6 +213,8 @@
 	.who-am-i
 		.who-am-i__txt-item
 			margin-bottom: 15px
+			&.margin_b
+				margin-bottom: 15px
 	.title
 		h2
 			@include fz(25)
@@ -207,6 +231,18 @@
 		height: 100px
 		h2
 			@include fz(23)
+	.video-on-YouTube
+		.video-on-YouTube__wrap-video
+			margin-bottom: 30px
+			iframe
+				height: 400px
+	.intermediate
+		.intermediate_wrap
+			.intermediate_item
+				&.submit
+					margin-bottom: 20px
+					&:last-of-type
+						margin-top: 40px
 
 // Extra small devices (portrait phones, less than 576px)
 @media only screen and (max-width : 575px)
@@ -265,6 +301,11 @@
 				@include fz(10)
 				span
 					@include fz(10)
+	.video-on-YouTube
+		.video-on-YouTube__wrap-video
+			margin-bottom: 20px
+			iframe
+				height: 270px
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/

@@ -25,7 +25,9 @@ block main
 						.col-8.col-sm-7.col-md-4
 							input(type="text", name="name", placeholder='Введите ваше имя')
 						.col-8.col-sm-7.col-md-4
-							input(type="text", name="email", placeholder='Введите ваш e-mail')
+							input(type="email", name="email", placeholder='Введите ваш e-mail')
+					input(type='hidden', name='form_name', value='')
+					input(type='hidden', name='form_type', value='normal')
 					.col-8.col-sm-7.col-md-4.col-lg-4.col-xl-4
 						button(type="submit").main_btn Получить 2 видео и бонус
 	// Секция Who am I
@@ -286,7 +288,7 @@ block main
 				.who-am-i__txt-wrap.col-xl-6.pull-xl-6
 					h3
 						| Возьмите наш отдел маркетинга в аренду, и вы…
-					.who-am-i__txt-item
+					.who-am-i__txt-item.margin_b
 						.who-am-i__txt-item-img
 							img(src=require("../../img/who-am-i__txt-item-img-team.png"))
 						.who-am-i__txt
@@ -294,21 +296,21 @@ block main
 								| економите, ненужно больше нанимать в штат на
 								| постоянную работу кучу сотрудников и платить за них
 								| налоги, оплачивать больничные и декретный отпуск;
-					.who-am-i__txt-item
+					.who-am-i__txt-item.margin_b
 						.who-am-i__txt-item-img
 							img(src=require("../../img/who-am-i__txt-item-img-search.png"))
 						.who-am-i__txt
 							p
 								| точечно, под конкретную задачу приглашаете нужных в
 								| данный момент специалистов;
-					.who-am-i__txt-item
+					.who-am-i__txt-item.margin_b
 						.who-am-i__txt-item-img
 							img(src=require("../../img/who-am-i__txt-item-img-idea.png"))
 						.who-am-i__txt
 							p
 								| перестаете думать о том, как выстраивать взаимоотношения
 								| в коллективе, мотивировать сотрудников;
-					.who-am-i__txt-item
+					.who-am-i__txt-item.margin_b
 						.who-am-i__txt-item-img
 							img(src=require("../../img/who-am-i__txt-item-img-shirt.png"))
 						.who-am-i__txt
@@ -316,21 +318,21 @@ block main
 								| прячете свое сито, через которое раньше отсеивали
 								| кандидатов, забудете про испытательный срок для нового
 								| маркетолога и тестовом задании для smm-специалиста;
-					.who-am-i__txt-item
+					.who-am-i__txt-item.margin_b
 						.who-am-i__txt-item-img
 							img(src=require("../../img/who-am-i__txt-item-img-gear.png"))
 						.who-am-i__txt
 							p
 								| оберегаете себя от ошибок и финансовых потерь, которые
 								| допускают «зеленые» кадры;
-					.who-am-i__txt-item
+					.who-am-i__txt-item.margin_b
 						.who-am-i__txt-item-img
 							img(src=require("../../img/who-am-i__txt-item-img-summary.png"))
 						.who-am-i__txt
 							p
 								| забываете, что есть такая статья расходов «обучение
 								| сотрудников отдела маркетинга»;
-					.who-am-i__txt-item
+					.who-am-i__txt-item.margin_b
 						.who-am-i__txt-item-img
 							img(src=require("../../img/who-am-i__txt-item-img-director-desk.png"))
 						.who-am-i__txt
@@ -642,7 +644,7 @@ block main
 						.intermediate_item.col-xl-4.col-lg-4.col-md-6.col-sm-12
 							.input_wrap
 								i.fa.fa-check
-								input(name='email', type='text', placeholder='Введите ваш e-mail')
+								input(name='email', type='email', placeholder='Введите ваш e-mail')
 						.intermediate_item.col-xl-4.col-lg-4.col-md-6.col-sm-12
 							.input_wrap
 								i.fa.fa-check
@@ -862,11 +864,11 @@ block main
 						.intermediate_item.col-xl-4.col-lg-4.col-md-6.col-sm-12
 							.input_wrap
 								i.fa.fa-check
-								input(name='email', type='text', placeholder='Введите ваш e-mail')
+								input(name='email', type='email', placeholder='Введите ваш e-mail')
 						.intermediate_item.col-xl-4.col-lg-4.col-md-6.col-sm-12
 							.input_wrap
 								i.fa.fa-check
-								input(name='phone_mask', type='text', class="mask", placeholder="+38(___) ___-__-__")
+								input(name='phone_mask', type='tel', class="mask", placeholder="+38(___) ___-__-__")
 						input(type='hidden', name='form_name', value='')
 						input(type='hidden', name='form_type', value='normal')
 						.intermediate_item.col-xl-4.col-lg-8.col-md-8.col-sm-12
@@ -1040,17 +1042,17 @@ block main
 			.intermediate_wrap
 				form
 					.row
-						.intermediate_item.col-xl-4.col-lg-4.col-md-4.col-sm-12
+						.intermediate_item.col-xl-4.col-lg-4.col-md-4.col-sm-12.submit
 							.input_wrap
 								i.fa.fa-check
 								input(name='name', type='text', placeholder='Введите ваше имя')
-						.intermediate_item.col-xl-4.col-lg-4.col-md-4.col-sm-12
+						.intermediate_item.col-xl-4.col-lg-4.col-md-4.col-sm-12.submit
 							.input_wrap
 								i.fa.fa-check
 								input(name='phone_mask', type='text', class="mask", placeholder="+38(___) ___-__-__")
 						input(type='hidden', name='form_name', value='')
 						input(type='hidden', name='form_type', value='normal')
-						.intermediate_item.col-xl-4.col-lg-4.col-md-4.col-sm-12
+						.intermediate_item.col-xl-4.col-lg-4.col-md-4.col-sm-12.submit
 							input(type='submit', value='Перезвонить мне', class='main_btn')
 	// Секция .social
 	section.social
