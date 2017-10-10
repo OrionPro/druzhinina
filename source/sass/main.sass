@@ -116,20 +116,20 @@ li
 	display: none
 // Модальное окно
 .white-popup
-	width: 470px
+	width: 570px
 	margin: auto
 	max-width: 50em
-	padding: 50px 46px 50px 46px
+	padding: 55px 15px 30px 15px
 	text-align: center
 	position: relative
 	background-color: #fff
-	border-radius: 5px
 	transition: 0.5s
 	p.modal-title
-		@include font($main_txt_color, 24, $font_main_regular, 1.4)
-	p.modal-paragraph
-		margin-bottom: 10px
-		@include font($main_txt_color, 14, $font_main_regular, 1.4)
+		@include font($main_txt_color, 18, $font_OpenSansRegular, 1.4)
+		margin-bottom: 30px
+		text-align: left
+		span
+			color: $main_color
 	&#popup-success
 		p.success_mail
 			display: block
@@ -172,17 +172,20 @@ li
 	input
 		width: 100%
 		height: 35px
-		margin-bottom: 10px
-		padding-left: 20px
-		padding-right: 37px
-		color: #3a4763
-		@include fz(14)
-		border: 1px solid #cdcdcd
-		background-color: #ffffff
-		border-radius: 5px
-		transition: 1s
+		margin-bottom: 30px
+		padding-left: 10px
+		background-color: transparent
+		border: none
+		border-bottom: 1px solid #000
+		transition: 0.5s
+		&:hover
+			outline: 0
+		&:active
+			outline: 0
+			border-bottom: 1px solid $main_color
 		&:focus
 			outline: 0
+			border-bottom: 1px solid $main_color
 	textarea
 		width: 100%
 		min-height: 100px
@@ -209,6 +212,7 @@ li
 		padding-right: 0
 		cursor: pointer
 		@extend .main_btn
+		width: 370px
 		&:focus
 			outline: 0
 	.select
@@ -299,7 +303,31 @@ li
 		outline: 0
 	&:focus
 		outline: 0
+.mfp-fade
+	&.mfp-bg
+		opacity: 0
+		-webkit-transition: all 0.15s ease-out
+		-moz-transition: all 0.15s ease-out
+		transition: all 0.15s ease-out
+		&.mfp-ready
+			opacity: 0.8
+		&.mfp-removing
+			opacity: 0
+	&.mfp-wrap
+		.mfp-content
+			opacity: 0
+			-webkit-transition: all 0.15s ease-out
+			-moz-transition: all 0.15s ease-out
+			transition: all 0.15s ease-out
+		&.mfp-ready .mfp-content
+			opacity: 1
+		&.mfp-removing .mfp-content
+			opacity: 0
 // конец модального
+// Скрываем ссылку для вызова модального окна
+.hide-link-are-you-leaving
+	opacity: 0
+	height: 0
 // для формы normal обёртка и иконка success
 .input_wrap
 	position: relative
@@ -765,10 +793,10 @@ nav[canvas]
 		display: flex
 		align-items: center
 		flex-basis: auto
-		button
+		.open-popup-link
 			width: 270px
 			margin-right: 30px
-		a
+		.authors-online-courses__item-txt-bot-link
 			@include fz(18)
 			color: inherit
 			&:hover
@@ -776,8 +804,10 @@ nav[canvas]
 			&:hover img
 				transform: translateX(20px)
 			&:active
+				outline: 0
 				text-decoration: none
 			&:focus
+				outline: 0
 				text-decoration: none
 			img
 				margin-left: 10px

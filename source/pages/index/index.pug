@@ -2,6 +2,7 @@ extends ../base
 block title
 	| Index page
 block main
+	a.hide-link-are-you-leaving.open-popup-link(data-effect="mfp-zoom-in" href="#popup4")
 	section.top-section
 		.video-wrapper
 			video(poster='../../img/header_bg.jpg', autoplay='autoplay', loop='loop', preload='metadata', muted="muted")
@@ -172,8 +173,8 @@ block main
 									| 1,5 месяца!
 									|
 								.authors-online-courses__item-txt-bot-btn
-									button.main_btn Записаться на курс
-									a(href="#") Узнать подробнее
+									a.main_btn.open-popup-link(data-effect="mfp-zoom-in" data-info="«От старта до первых продаж»" href="#popup") Записаться на курс
+									a.authors-online-courses__item-txt-bot-link.open-popup-link(data-effect="mfp-zoom-in" data-info="Конференция по интернет-маркетингу. Страница находится в разработке" href="#popup2") Узнать подробнее
 										img(src=require("../../img/authors-online-courses__item-right-arrow.png"))
 				//.authors-online-courses__item
 					.row
@@ -209,8 +210,8 @@ block main
 									| 1,5 месяца!
 									|
 								.authors-online-courses__item-txt-bot-btn
-									button.main_btn Записаться на курс
-									a(href="#") Узнать подробнее
+									a.main_btn.open-popup-link(data-effect="mfp-zoom-in" data-info="Обратный звонок" href="#popup") Записаться на курс
+									a.open-popup-link(data-effect="mfp-zoom-in" data-info="Конференция по интернет-маркетингу. Страница находится в разработке" href="#popup2") Узнать подробнее
 										img(src=require("../../img/authors-online-courses__item-right-arrow.png"))
 				//.authors-online-courses__item
 					.row
@@ -246,8 +247,8 @@ block main
 									| 1,5 месяца!
 									|
 								.authors-online-courses__item-txt-bot-btn
-									button.main_btn Записаться на курс
-									a(href="#") Узнать подробнее
+									a.main_btn.open-popup-link(data-effect="mfp-zoom-in" data-info="Обратный звонок" href="#popup") Записаться на курс
+									a.open-popup-link(data-effect="mfp-zoom-in" data-info="Конференция по интернет-маркетингу. Страница находится в разработке" href="#popup2") Узнать подробнее
 										img(src=require("../../img/authors-online-courses__item-right-arrow.png"))
 
 	// Секция  department-for-rent
@@ -705,8 +706,8 @@ block main
 								| sed quia consequuntur magni dolores eos qui ratione voluptatem
 								| sequi nesciunt.
 							.conference-for-internet-marketing__text-button.hidden-text-button
-								button(type="text" class="main_btn") Записаться
-								a(href="#") Читать подробнее
+								button.main_btn.open-popup-link(data-effect="mfp-zoom-in" data-info="Конференция по интернет-маркетингу" data-mfp-src="#popup") Записаться
+								a.open-popup-link(data-effect="mfp-zoom-in" data-info="Конференция по интернет-маркетингу. Страница находится в разработке" href="#popup2") Читать подробнее
 									img(src=require("../../img/authors-online-courses__item-right-arrow.png"))
 					.col-xl-6
 						.conference-for-internet-marketing__img
@@ -725,7 +726,7 @@ block main
 								img(src=require("../../img/conference-for-internet-marketing__img6.jpg") class="img-fluid")
 							.col-12
 								.conference-for-internet-marketing__text-button
-									button(type="text" class="main_btn") Записаться
+									button(data-effect="mfp-zoom-in" data-info="Конференция по интернет-маркетингу" data-mfp-src="#popup" class="main_btn open-popup-link") Записаться
 									a(href="#") Читать подробнее
 										img(src=require("../../img/authors-online-courses__item-right-arrow.png"))
 
