@@ -13,12 +13,12 @@ class Animation {
 			y: -50,
 			opacity: 0,
 			ease: Power4.easeOut
-		}, 0.2, '+=0.4')
-			.staggerFrom('.top-anim', 1, {
+		}, 0.2, '+=0.5')
+			.staggerFrom('.top-anim', 1.5, {
 			y: -50,
 			opacity: 0,
 			ease: Power4.easeOut
-		}, 0.2, '+=0.4');
+		}, 0.4, '+=0.1');
 
 	}
 
