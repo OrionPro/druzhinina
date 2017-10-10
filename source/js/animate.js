@@ -9,13 +9,16 @@ class Animation {
 	}
 
 	description() {
-		this.tl1.from('.top-section__title', 0.7, {
-			y: -100,
+		this.tl1.staggerFrom('.header__nav ul li', 1, {
+			y: -50,
 			opacity: 0,
 			ease: Power4.easeOut
-		}, '+=0.3')
-			.from('#path4297', 1,
-			{drawSVG: "50% 50%"}, 0.2);
+		}, 0.2, '+=0.4')
+			.staggerFrom('.top-anim', 1, {
+			y: -50,
+			opacity: 0,
+			ease: Power4.easeOut
+		}, 0.2, '+=0.4');
 
 	}
 

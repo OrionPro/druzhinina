@@ -9,11 +9,11 @@ block main
 				source(src=require('../../img/ad_.webm'), type='video/webm')
 		.container
 			.row
-				.top-section__title.col-12
+				.top-section__title.col-12.top-anim
 					h1
 						| Алена Дружинина.
 					p Предприниматель. Бизнес-тренер. Маркетолог-консультант.
-				.top-section__bot-txt.col-12
+				.top-section__bot-txt.col-12.top-anim
 					p
 						| Получите 2 видео «Как найти свою нишу» и «Основные ошибки,
 						br
@@ -21,14 +21,14 @@ block main
 						br
 						| плюс бонус от меня прямо сейчас.
 				form
-					.top-section__input-wrap
+					.top-section__input-wrap.top-anim
 						.col-8.col-sm-7.col-md-4
 							input(type="text", name="name", placeholder='Введите ваше имя')
 						.col-8.col-sm-7.col-md-4
 							input(type="email", name="email", placeholder='Введите ваш e-mail')
 					input(type='hidden', name='form_name', value='')
 					input(type='hidden', name='form_type', value='normal')
-					.col-8.col-sm-7.col-md-4.col-lg-4.col-xl-4
+					.col-8.col-sm-7.col-md-4.col-lg-4.col-xl-4.top-anim
 						button(type="submit").main_btn Получить 2 видео и бонус
 	// Секция Who am I
 	section#who-am-i.who-am-i
