@@ -19,11 +19,7 @@ $(document).ready(function () {
 		var cookieArr = document.cookie.split(';');
 
 		for (var key in cookieArr) {
-			if (cookieArr[key] === data) {
-				return true;
-			}else{
-				return false;
-			}
+			return cookieArr[key] === data
 		}
 	}
 
