@@ -558,16 +558,15 @@ nav[canvas]
 
 // Header
 .header
-	width: 100%
 	min-height: 110px
 	padding-top: 30px
 	padding-bottom: 30px
 	background-color: #fff
-	.row
+	.header-wrap
+		width: 100%
+		display: flex
 		align-items: center
 .header__logo
-	display: inline-block
-	margin-left: 15px
 	a
 		color: #fff
 		@include fz(34)
@@ -575,17 +574,16 @@ nav[canvas]
 		&:hover
 			text-decoration: none
 .header__nav
-	display: inline-block
 	position: relative
-	margin-left: auto
+	margin: auto
 	ul
 		li
-			list-style: none
 			display: inline-block
+			list-style: none
 			&:last-of-type a
-				margin-right: 15px
+				margin-right: 0
 			a
-				margin-right: 55px
+				margin-right: 40px
 				color: $main_txt_color
 				@include fz(16)
 				text-decoration: none
@@ -619,6 +617,20 @@ nav[canvas]
 					opacity: 0
 					background-color: $main_color
 					transition: 0.5s
+.header_tell
+	color: #e64a19
+	font-weight: bold
+	transition: 0.5s
+	&:hover
+		text-decoration: none
+		color: $main_txt_color
+	&:active
+		text-decoration: none
+		color: $main_txt_color
+	&:focus
+		text-decoration: none
+		color: $main_txt_color
+
 // Секция top-section
 .top-section
 	padding: 0 0 120px 0
@@ -923,6 +935,9 @@ nav[canvas]
 .video-on-YouTube
 	background-color: #fff
 	padding-bottom: 80px
+	.row.button_new
+		justify-content: center
+		margin-top: 30px
 	.video-on-YouTube__wrap-video
 		margin-bottom: 100px
 		iframe
@@ -988,6 +1003,9 @@ nav[canvas]
 		text-align: center
 		background-color: #fcfcfc
 		box-shadow: -1.7px 4.7px 4.8px 0.3px rgba(50, 50, 50, 0.1)
+		transition: background-color 0.5s
+		&:hover
+			background-color: #f1f1f1
 	.my-services__item-img
 		margin-bottom: 30px
 	.my-services__item-txt

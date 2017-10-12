@@ -64,13 +64,13 @@ html(class="no-js" lang="ru")
 									a(href="#")
 										img(src=require("../../img/close-ultra-thin.png"))
 									p
-										| 29-31 ОКТЯБРЯ 2017
-										span «АНАТОМИЯ ПРОДАЖ В ИНТЕРНЕТЕ»
+										| 14 октября 2017
+										span «Продвижение бизнеса и личного бренда в Facebook»
 								button(type="text") Принять участие
 
 				header(class="header")
 					.container
-						.row
+						.header-wrap
 							.header__logo
 								a(href="/" class="logo" title="Логотип")
 									img(src=require("../../img/logo.png"))
@@ -80,6 +80,8 @@ html(class="no-js" lang="ru")
 									each i in links
 										li
 											a(href=i.href)= i.title
+							div
+								a(class="header_tell" href="tel:+380988608211") +38(098)860-82-11
 			block main
 			block footer
 				// Секция footer
