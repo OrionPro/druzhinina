@@ -14,7 +14,6 @@ import modal from '../js/modal';
 
 import '../sass/main.sass';
 import functions from '../js/_functions.js';
-
 // табы tabs
 function tabs(obj) {
 	const buttons = document.querySelectorAll(obj.btn);

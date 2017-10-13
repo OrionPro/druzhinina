@@ -9,7 +9,6 @@ import animate from '../../js/animate';
 import App from '../../js/react';
 
 $(document).ready(function () {
-	$("body").addClass("index ink-transition");
 	// Убираем рекламный блок top-shares
 	$(".top-shares__txt .top-shares__txt-inner>a").on("click", function (e) {
 		e.preventDefault();
