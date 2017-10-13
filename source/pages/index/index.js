@@ -20,6 +20,10 @@ $(document).ready(function () {
 		for (var key in cookieArr) {
 			return cookieArr[key] === data
 		}
+		//	Object.values
+		// for (const val of Object.values(cookieArr)) {
+		// 	return val === data
+		// }
 	}
 
 	function setCookie(data){
