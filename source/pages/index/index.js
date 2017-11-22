@@ -29,16 +29,17 @@ $(document).ready(function () {
 	function setCookie(data){
 		document.cookie = data;
 	}
-
+	// 3600 - это 3 600 000 разделённые на 1000 (для удобства ,чтобы потом легче было понимать сколько часов), т.е. ЧАС в миллисекундах, потом просто умножаем нужное количество тысяч (т.е. часов 24 000 это 24 часа в итоге)
 	function getExitModal(){
-		var date = new Date(new Date().getTime() + 3600 * 20000);
+		var date = new Date(new Date().getTime() + 3600 * 24000);
 
 		$(document).mousemove(function(e) {
 			var topPosition = window.pageYOffset || document.documentElement.scrollTop;
 
-			if (e.pageY  <= topPosition + 10 && !getCookie('modal=attended')) {
+			if (e.pageY  <= topPosition + 10 && !getCookie('modal=attended') && !$('body').hasClass('modal-attended')) {
 
 				setCookie('modal=attended; path=/; expires=' + date.toUTCString());
+				$('body').addClass('modal-attended');
 				$('.hide-link-are-you-leaving').trigger('click');
 				// Версия вызова модального окна через присвоение mainClass
 				// $.magnificPopup.open({
