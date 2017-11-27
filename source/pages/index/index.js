@@ -1,7 +1,7 @@
 import common from '../../js/common';
 
 require("../../libs/libs").owl_carousel();
-import '../../pages/index/index.pug'; //это для обновления страницы при hotreload - при npm build убрать
+//import '../../pages/index/index.pug'; //это для обновления страницы при hotreload - при npm build убрать
 import '../../pages/modal.pug'; //это для обновления страницы при hotreload - при npm build убрать
 import './index.sass';
 
@@ -9,77 +9,7 @@ import animate from '../../js/animate';
 import App from '../../js/react';
 
 $(document).ready(function () {
-	// Убираем рекламный блок top-shares
-	$(".top-shares__txt .top-shares__txt-inner>a").on("click", function (e) {
-		e.preventDefault();
-		$(".top-shares").hide();
-	});
-	function getCookie(data) {
-		var cookieArr = document.cookie.split(';');
 
-		for (var key in cookieArr) {
-			return cookieArr[key] === data
-		}
-		//	Object.values
-		// for (const val of Object.values(cookieArr)) {
-		// 	return val === data
-		// }
-	}
-
-	function setCookie(data){
-		document.cookie = data;
-	}
-	// 3600 - это 3 600 000 разделённые на 1000 (для удобства ,чтобы потом легче было понимать сколько часов), т.е. ЧАС в миллисекундах, потом просто умножаем нужное количество тысяч (т.е. часов 24 000 это 24 часа в итоге)
-	function getExitModal(){
-		var date = new Date(new Date().getTime() + 3600 * 24000);
-
-		$(document).mousemove(function(e) {
-			var topPosition = window.pageYOffset || document.documentElement.scrollTop;
-
-			if (e.pageY  <= topPosition + 10 && !getCookie('modal=attended') && !$('body').hasClass('modal-attended')) {
-
-				setCookie('modal=attended; path=/; expires=' + date.toUTCString());
-				$('body').addClass('modal-attended');
-				$('.hide-link-are-you-leaving').trigger('click');
-				// Версия вызова модального окна через присвоение mainClass
-				// $.magnificPopup.open({
-				// 	items: {
-				// 		src: '#popup4',
-				// 		type: 'inline'
-				// 	},
-				// 	removalDelay: 200,
-				// 	mainClass: 'mfp-fade',
-				// 	callbacks: {
-				// 		beforeOpen: function () {
-				// 			this.st.mainClass = 'mfp-fade';
-				// 			$('input:not("[type=submit], [type=hidden], .select2-search__field")').removeClass('tooltipster-show').tooltipster('close');
-				// 		},
-				// 		close: function () {
-				// 			$('.white-popup .input_wrap i').hide();
-				// 			if (get_name_browser() == "Google Chrome") {
-				// 				$("html").removeClass("modal");
-				// 			}
-				// 			$('input:not("[type=submit], [type=hidden], .select2-search__field")').removeClass('tooltipster-show').tooltipster('close');
-				// 			// Это код закрытия эффекта красивого при открытии и закрытии модалки
-				// 			$(".cd-transition-layer").addClass("closing"), $("#popup").removeClass("visible"), $(".cd-transition-layer").children().one("webkitAnimationEnd oanimationend msAnimationEnd animationend", function () {
-				// 				$(".cd-transition-layer").removeClass("closing opening visible"), $(".cd-transition-layer").children().off("webkitAnimationEnd oanimationend msAnimationEnd animationend")
-				// 			})
-				// 		},
-				// 		open: function () {
-				// 			$(".mfp-close-btn-in .mfp-close").tooltipster({
-				// 				theme: 'tooltipster-light'
-				// 			});
-				// 		}
-				// 	},
-				// 	closeOnBgClick: true,
-				// 	closeOnContentClick: false,
-				// 	closeMarkup: '<button title="%title%" type="button" class="mfp-close"><i class="fa fa-close"></i></button>',
-				// 	tClose: 'Закрыть (Esc)',
-				// });
-			}
-		});
-	}
-	getExitModal();
 	// Определения браузера
 	function get_name_browser() {
 		// получаем данные userAgent
@@ -168,8 +98,7 @@ $(document).ready(function () {
 			$(this).html(str + ' ...');
 		}
 	});
-	// Инициализация маски в input
-	$(".mask").mask("+38(999) 999-99-99");
+
 });
 
 $(window).resize(function () {

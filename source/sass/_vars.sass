@@ -2,8 +2,10 @@
 @import 'sprite'
 
 $main_color: #e64a19
+$main_color_green: #15a72b
 $auxiliary_txt_color: #443133
 $main_txt_color: #353535
+$main_txt_color_green: #343434
 $main_bg_color: #fff
 
 
@@ -90,6 +92,64 @@ $font_OpenSansSemiBold: "OpenSansSemiBold",-apple-system,system-ui,BlinkMacSyste
 		outline: 0
 		text-decoration: none
 		color: #fff
+.main_btn_green
+	width: 100%
+	height: 80px
+	padding: 0 5px
+	background-color: $main_color_green
+	border: none
+	border-radius: 10px
+	box-shadow: 0 6px 0 0 #138023
+	@include font(#fff, 24, $font_OpenSansSemiBold)
+	line-height: 76px
+	text-align: center
+	transition: transform, box-shadow, 0.1s ease-in-out
+	&:hover
+		outline: 0
+		text-decoration: none
+		background-color: lighten($main_color_green, 3%)
+	&:active
+		outline: 0
+		text-decoration: none
+		box-shadow: 0 2px 0 0 #138023
+		transform: translateY(4px)
+	&:focus
+		outline: 0
+		text-decoration: none
+		box-shadow: 0 2px 0 0 #138023
+		transform: translateY(4px)
+.main_btn_transparent
+	width: 100%
+	height: 80px
+	padding: 0 5px
+	background-color: transparent
+	border: 3px solid $main_color_green
+	border-radius: 10px
+	@include font($main_color_green, 24, $font_OpenSansSemiBold)
+	line-height: 76px
+	text-align: center
+	transition: 0.5s
+	span
+		color: $main_txt_color_green
+		text-decoration: line-through
+		transition: 0.5s
+	&:hover span
+		color: #fff
+	&:hover
+		outline: 0
+		text-decoration: none
+		background-color: $main_color_green
+		color: $main_txt_color_green
+	&:active
+		outline: 0
+		text-decoration: none
+		background-color: $main_color_green
+		color: $main_txt_color_green
+	&:focus
+		outline: 0
+		text-decoration: none
+		background-color: $main_color_green
+		color: $main_txt_color_green
 section
 	padding-top: 80px
 .center
