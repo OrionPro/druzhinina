@@ -99,6 +99,34 @@
 		.who-am-i__txt-item
 			&.margin_b
 				margin-bottom: 30px
+	.who-am-i
+		&.what-you-get
+			.who-am-i__txt-wrap
+				margin-bottom: 0
+	.how-to-open-a-business__item-img
+		img
+			display: block
+			max-width: 100%
+			height: auto
+			margin: 0 auto 20px
+	.title__green__item-img
+		margin-bottom: 20px
+	.practical-course__btns
+		flex-direction: column
+		align-items: center
+	.practical-course__buy-course
+		margin-bottom: 20px
+		margin-right: 0
+	.practical-course
+		background-size: cover
+	.practical-course__first-three-lessons
+		margin-bottom: 20px
+	.not-ready-to-buy-right-away__info-txt
+		p
+			br
+				display: none
+	.practical-course__item
+		margin-bottom: 20px
 // Medium devices (tablets, less than 992px)
 @media only screen and (max-width : 991px)
 	/**/
@@ -124,7 +152,17 @@
 				margin-bottom: 20px
 				&.submit
 					margin-bottom: 0
-
+	.title__green
+		h2
+			@include fz(25)
+			br
+				display: none
+		p
+			br
+				display: none
+	.not-ready-to-buy-right-away__info-txt
+		p
+			@include fz(20)
 // Small devices (landscape phones, less than 768px)
 @media only screen and (max-width : 767px)
 	
@@ -249,7 +287,42 @@
 					margin-bottom: 20px
 					&:last-of-type
 						margin-top: 40px
-
+	.how-to-open-a-business__item-txt
+		a
+			@include fz(17)
+	.information-block-green__btn
+		width: 100%
+		button
+			height: 100%
+			line-height: 35px
+	.practical-course__buy-course
+		width: 100%
+	.practical-course__first-three-lessons
+		width: 100%
+		button
+			line-height: 35px
+	.table-what-is-par-for-the-course
+		thead
+			th:nth-child(1n+2)
+				width: 140px
+			th.empty
+				width: 30px
+		tbody
+			td
+				button
+					width: 140px
+	.not-ready-to-buy-right-away__big-btn
+		width: 100%
+		button
+			line-height: 35px
+	.become-a-student-of-the-course__item
+		margin-bottom: 20px
+	.become-a-student-of-the-course__item-top
+		flex-direction: column
+	.become-a-student-of-the-course__item-top-img
+		margin-right: 0
+	.footer__divider
+		width: 300px
 // Extra small devices (portrait phones, less than 576px)
 @media only screen and (max-width : 575px)
 	/**/
@@ -263,6 +336,12 @@
 					p
 						&.table-rates__hidden
 							display: block
+	.table-what-is-par-for-the-course-wrap
+		overflow: auto
+	.table-what-is-par-for-the-course
+		width: 510px
+	.table-what-is-par-for-the-course thead th p.table-what-is-par-for-the-course__hidden
+		display: block
 // Extra small devices (portrait phones, less than 521px)
 @media only screen and (max-width : 520px)
 	/**/
@@ -280,6 +359,8 @@
 		flex-direction: column
 		.open-popup-link
 			margin-bottom: 15px
+	.title__green__item-txt
+		padding-left: 10px
 // Extra small devices (portrait phones, less than 481px)
 @media only screen and (max-width : 480px)
 	/**/
@@ -315,6 +396,24 @@
 			margin-bottom: 20px
 			iframe
 				height: 270px
+	.title__green-divider
+		width: 285px
+	.practical-course__first-three-lessons
+		button
+			font-size: 19px
+	.not-ready-to-buy-right-away__big-btn
+		button
+			height: 100%
+			font-size: 19px
+	.footer__divider
+		width: 250px
+	.social__phone-mail
+		a
+			display: table
+			margin: 0
+			margin: auto
+			&:last-of-type
+				margin: auto
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/

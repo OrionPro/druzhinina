@@ -85,16 +85,17 @@ html(class="no-js" lang="ru")
 				footer.footer
 					.container
 						p 2017. Все права защищены
-		div(off-canvas='id-1 left shift')
-			nav.header_nav_mobile
-				ul.menu
-					-var obj1 = [{title:'Авторские курсы', href:'blog.html'},{title:'Услуги', href:'#'},{title:'Отзывы клиентов', href:'#'},{title:'Блог', href:'Личный кабинет'}];
-					each i in obj1
-						li
-							a(href=i.href)= i.title
-		div(off-canvas='id-2 right push')
-		div(off-canvas='id-3 top overlay')
-		div(off-canvas='id-4 bottom shift')
+		block slidebars
+			div(off-canvas='id-1 left shift')
+				nav.header_nav_mobile
+					ul.menu
+						-var obj1 = [{title:'Авторские курсы', href:'blog.html'},{title:'Услуги', href:'#'},{title:'Отзывы клиентов', href:'#'},{title:'Блог', href:'#'},{title: 'Личный кабинет', href:'#'}];
+						each i in obj1
+							li
+								a(href=i.href)= i.title
+			div(off-canvas='id-2 right push')
+			div(off-canvas='id-3 top overlay')
+			div(off-canvas='id-4 bottom shift')
 		//[if IE 9]>
 			<script src="libs/html5shiv/es5-shim.min.js"></script>
 			<script src="libs/html5shiv/html5shiv.min.js"></script>
