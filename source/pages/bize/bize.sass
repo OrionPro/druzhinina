@@ -445,6 +445,26 @@ body
 // Секция .social
 .social
 	background: #fff
+	p
+		text-align: center
+		margin-bottom: 10px
+		@include font($main_txt_color_green, 18, $font_OpenSansSemiBold, 1.2)
+	.container
+		&>a
+			width: 270px
+			height: 60px
+			line-height: 60px
+			margin: 0 auto 50px
+			display: block
+			text-decoration: none
+			&:hover
+				color: #fff
+				text-decoration: none
+			&:active
+				text-decoration: none
+			&:focus
+				text-decoration: none
+
 // Секция footer
 .footer
 	height: 55px
