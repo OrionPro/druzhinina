@@ -12,7 +12,22 @@ body
 		background-color: $main_color_green
 		&:hover
 			background-color: darken($main_color_green, 10%)
-
+.white-popup
+	input[type=submit]
+		background-color: $main_color_green
+		border: 1px solid $main_color_green
+		box-shadow: 0 0 10px 5px rgba(9, 246, 0, 0.56)
+		&:hover
+			outline: 0
+			background-color: darken($main_color_green, 7%)
+		&:active
+			outline: 0
+		&:focus
+			outline: 0
+	p.modal-title
+		span
+			color: $main_color_green
+// Секция top
 .top-shares
 	.top-shares__txt
 		p
@@ -22,7 +37,12 @@ body
 .header_tell
 	color: $main_color_green
 	@include fz(22)
+	&:hover
+		color: $main_color_green
+	&:hover
+		text-decoration: underline
 	i
+		margin-right: 10px
 		color: $main_color_green
 	span
 		color: $main_txt_color_green
