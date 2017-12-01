@@ -300,7 +300,6 @@ body
 					display: none
 					img
 						margin-left: 10px
-
 	tbody
 		background: #f2f2f2
 		@include font($main_txt_color_green, 16, $font_OpenSansRegular, 1.2)
@@ -319,6 +318,11 @@ body
 			border-bottom: 1px solid #c2c2c2
 			div
 				padding-left: 15px
+			&.current
+				&.not-current
+					span
+						opacity: 0.2
+						text-decoration: line-through
 			.divider
 				width: 100%
 				height: 1px
