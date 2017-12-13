@@ -159,6 +159,11 @@ $(document).ready(function () {
 							$('.white-popup .success_mail').removeClass('active');
 							self.find('input[type="submit"]').attr('disabled', false);
 						}, 3500);
+						if (data['form_name'] == 'Купить курс сейчас') {
+							setTimeout(function () {
+								window.location.assign("http://google.com");
+							}, 4000);
+						}
 					}
 					if (data['form_type'] == 'normal') { //надо писать в обычных формах <input type="hidden" name="form_type" value="normal">
 						self.trigger('reset');
