@@ -161,7 +161,32 @@ $(document).ready(function () {
 						}, 3500);
 						if (data['form_name'] == 'Купить курс сейчас') {
 							setTimeout(function () {
-								window.location.assign("http://google.com");
+								window.location.assign("https://sendmoney.privatbank.ua/ru/?hash=2498548784");
+							}, 4000);
+						}
+						if (data['form_name'] == 'Посетить первых три занятия') {
+							setTimeout(function () {
+								window.location.assign("https://sendmoney.privatbank.ua/ru/?hash=3121431966");
+							}, 4000);
+						}
+						if (data['form_name'] == 'Посетить первое занятие') {
+							setTimeout(function () {
+								window.location.assign("https://sendmoney.privatbank.ua/ru/?hash=1672562406");
+							}, 4000);
+						}
+						if (data['form_name'] == 'С куратором') {
+							setTimeout(function () {
+								window.location.assign("https://sendmoney.privatbank.ua/ru/?hash=2498548784");
+							}, 4000);
+						}
+						if (data['form_name'] == 'Купить оффлайн') {
+							setTimeout(function () {
+								window.location.assign("https://sendmoney.privatbank.ua/ru/?hash=468568291");
+							}, 4000);
+						}
+						if (data['form_name'] == 'Без куратора') {
+							setTimeout(function () {
+								window.location.assign("https://sendmoney.privatbank.ua/ru/?hash=1518159931");
 							}, 4000);
 						}
 					}

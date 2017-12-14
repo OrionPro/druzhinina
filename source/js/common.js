@@ -41,6 +41,7 @@ $(document).ready(function () {
 	});
 	function getCookie(data) {
 		var cookieArr = document.cookie.split(';');
+		console.log(cookieArr);
 
 		for (var key in cookieArr) {
 			return cookieArr[key] === data
@@ -57,7 +58,7 @@ $(document).ready(function () {
 	// 3600 - это 3 600 000 разделённые на 1000 (для удобства ,чтобы потом легче было понимать сколько часов), т.е. ЧАС в миллисекундах, потом просто умножаем нужное количество тысяч (т.е. часов 24 000 это 24 часа в итоге)
 	function getExitModal(){
 		var date = new Date(new Date().getTime() + 3600 * 24000);
-
+		console.log(getCookie('modal=attended'));
 		$(document).mousemove(function(e) {
 			var topPosition = window.pageYOffset || document.documentElement.scrollTop;
 
